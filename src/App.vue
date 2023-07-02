@@ -27,8 +27,8 @@
       </div>
 
       <div class="fields">
-        <button @click="newField">+</button>
         <div class="field-list">
+          <button @click="newField">+</button>
           <div v-for="(field, index) in fields" :key="index" class="field">
             <div class="field-main">
               <input v-model="field.name" type="text" />
@@ -123,8 +123,16 @@ const moveDown = (index: number) => {
   overflow: auto;
 }
 
+table {
+  table-layout: fixed;
+}
+
+th {
+  overflow: hidden;
+}
+
 .column {
-  border: solid 1px #333;
+  border-right: solid 1px #555;
 }
 
 .fields {
